@@ -1,5 +1,5 @@
 import express from 'express';
-const Todo = require('./schemas/todo');
+import Todo from './schemas/todo';
 
 const router = express.Router();
 
