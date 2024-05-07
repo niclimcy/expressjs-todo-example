@@ -1,17 +1,17 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
 const { Schema } = mongoose;
 
 const todoSchema = new Schema({
   name: {
     type: String,
-    required: true
+    required: true,
   },
   isCompleted: {
     type: Boolean,
     required: true,
-    default: false
-  }
+    default: false,
+  },
 });
 
-export default mongoose.model('Todo', todoSchema);
+export default mongoose.model("Todo", todoSchema);

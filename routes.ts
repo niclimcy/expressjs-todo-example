@@ -1,10 +1,10 @@
-import express from 'express';
-import Todo from './schemas/todo';
+import express from "express";
+import Todo from "./schemas/todo";
 
 const router = express.Router();
 
 // Create a new todo item
-router.post('/todos', async (req, res) => {
+router.post("/todos", async (req, res) => {
   const { name, isCompleted } = req.body;
 
   try {
@@ -18,7 +18,7 @@ router.post('/todos', async (req, res) => {
 });
 
 // Get all todos
-router.get('/todos', async (req, res) => {
+router.get("/todos", async (req, res) => {
   try {
     const todos = await Todo.find({});
     res.send(todos);
@@ -28,4 +28,4 @@ router.get('/todos', async (req, res) => {
   }
 });
 
-export default router
+export default router;
